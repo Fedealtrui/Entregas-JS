@@ -1,26 +1,31 @@
-//Ejercicios de Control de flujos
 
 
-let nombre = prompt('Bienvenido, cual es tu nombre?')
-let numero = parseFloat(prompt(`Hola ${nombre}, decime un numero:`))
+//Crear un algoritmo simple
 
 
-if (numero > 10 && numero < 50 ){
-    alert(`Tu numero es ${numero} y es mayor que 10 pero menor que 50`)
-        }else if (numero > 50){
-            alert('Mira la consola ;)');
-            console.log('Tu numero es mayor que 50')
-        }else{
-            alert(`${nombre} tu numero es muy bajo, por favor elige otro`)
-        }
+//Declaracion de variables
 
-    let saludo = prompt('Gracias por visitarme: ')
 
-    if (saludo != ''){
-        alert('Hasta la proxima!')
-    } else{
-        console.log(':(')
-    }
+let nombre = prompt('Hola! ¿Cual es tu nombre?');
+
+alert(`${nombre}, practiquemos un poco! `);
+
+
+let numero1 = parseFloat(prompt('elegi un numero:'));
+
+let numero2 = parseFloat(prompt('Ahora otro numero:'));
+
+let suma = numero1 + numero2;
+let multiplicacion= numero1 * numero2;
+let division= numero1/numero2;
+
+
+alert(`Si los sumamos: ${suma}`)
+alert(`Si los multiplicamos: ${multiplicacion}`);
+alert(`Si los dividimos: ${division}`)
+
+
+alert(`Gracias ${nombre} por visitarme.`)
 
 
 
