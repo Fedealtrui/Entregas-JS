@@ -5,20 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/styles.css">
-    <title>Carrito de compras</title>
+    <title>Panel de control - Libelula.</title>
 </head>
 <body>
-    <header><h1>Carrito de compras</h1></header>
+    <header><h1>Panel de control</h1></header>
 
     <main>
-        <h2 class="titulo">ITEMS</h2>
-        <ul class="list-items">
-        <li class="items"><p> COMIDA </p><p class="precio">Precio: 150</p> <button>Comprar</button> </li>
-        <li class="items"><p> ROPA </p><p class="precio">Precio: 200</p> <button>Comprar</button></li>
-        <li class="items"><p> MEDICINA </p><p class="precio">Precio: 300</p> <button>Comprar</button></li>
+        <div id="stock">
+        <h2 class="titulo">Stock</h2>
+        <ul class="stock-items">
+            <li class='item'><img src="https://via.placeholder.com/150" class='item-img' alt=""> <ul><li> Nombre:</li> <li> Precio:</li> <li> Cantidad: </li></ul></li>
+        </ul>
+    </div>
 
-    </ul>
+        <div id="modificadorDeStock">
+        <h2>Agregar productos</h2>
+        <form id="form-stock">
+
+            
+            <label for="nombre">
+                Nombre:
+            </label>
+            <input type="text" name="nombre" id="nombre">
+
+
+            <label for="precio">
+                Precio:
+            </label>
+            <input type="number" name="precio" id="precio">
+        
+
+            <label for="cantidad"> Cantidad</label>
+            <input type="number" name="cantidad" id="cantidad">
+        </form>
+    </div>
+    <div id="pedidos">
+        <h2>Pedidos</h2>
+        <div class='pedido'> 
+            <h3 class='numeroPedido'>Pedido #xxxx</h3>
+            <div class="fechaPedido">Fecha:</div>
+            <div class='clientePedido'>Nombre Cliente:</div>
+            <div class= 'contactoPedido'>Contacto:</div>
+            <div class='direccionPedido'>Direccion:</div>
+            <div class="items-pedido" id='items-pedido'>
+                item
+            </div>
+            <div class='precioPedido'>Precio:</div>
+            <div class='detallesPedido'>Detalles:</div>
+            <div class='fechaDeEntrega'>Fecha de entrega:</div>
+        </div>
+
+        <div class='pedido'> 
+            <h3 class='numeroPedido'>Pedido #xxxx</h3>
+            <div class="fechaPedido">Fecha:</div>
+            <div class='clientePedido'>Nombre Cliente:</div>
+            <div class= 'contactoPedido'>Contacto:</div>
+            <div class='direccionPedido'>Direccion:</div>
+            <div class="items-pedido" id='items-pedido'>
+                item
+            </div>
+            <div class='precioPedido'>Precio:</div>
+            <div class='detallesPedido'>Detalles:</div>
+            <div class='fechaDeEntrega'>Fecha de entrega:</div>
+        </div>
+    </div>
     </main>
-    <script src="app.js"></script>
+    <!-- <script src="app.js"></script> -->
 </body>
 </html>

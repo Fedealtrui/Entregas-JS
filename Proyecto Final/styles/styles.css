@@ -1,3 +1,7 @@
+
+body{
+    background-color: #D99F7E;
+}
 .list-items{
     list-style-type: none;
     display: flex;
@@ -11,19 +15,77 @@ h1{
 .titulo{
     text-align: center;
 }
-.items{
-    text-align: center;
-    background-color: green;
+.item{
+    text-align:justify;
+    background-color: #8C6A56;
     color: snow;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+}
+
+.item img{
+    max-width: 50px;
 }
 
 .precio{
     color: black;
 }
 
-.items p{
-    height: 50px;
-    width: 100px;
+.item ul{
+    list-style-type: none;
 }
+
+h2{
+    text-align: center;
+}
+.pedido {
+    width: 100%;
+    display: grid;
+    background-color: #73273B;
+    margin-bottom: 15px;
+    grid-template-areas:
+     "pedido pedido pedido pedido"
+     "fecha cliente contacto direccion"
+     "items items items items"
+     "precio precio precio precio"
+     "detalles detalles fechaDeEntrega fechaDeEntrega";
+    }
+    .numeroPedido{
+        grid-area: pedido;
+    }
+
+    .fechaPedido{
+        grid-area: fecha;
+    }
+
+    .clientePedido{
+        grid-area: cliente;
+    }
+
+    .contactoPedido{
+        grid-area: contacto;
+    }
+
+    .direccionPedido{
+        grid-area: direccion;
+    }
+
+    .items-pedido{
+        grid-area: items;
+    }
+
+    .precioPedido{
+        grid-area: precio
+    }
+
+    .detallesPedido{
+        grid-area: detalles;
+    }
+
+    .fechaDeEntrega{
+        grid-area: fechaDeEntrega;
+    }
+
+
+
+
