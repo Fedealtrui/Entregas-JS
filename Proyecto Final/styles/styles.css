@@ -43,22 +43,26 @@ h2{
     display: grid;
     background-color: #73273B;
     margin-bottom: 15px;
+    padding: 10px;
+    color: white;
     grid-template-areas:
      "pedido pedido pedido pedido"
      "fecha cliente contacto direccion"
      "items items items items"
      "precio precio precio precio"
-     "detalles detalles fechaDeEntrega fechaDeEntrega";
+     "detalles detalles status status"
+     "fechaDeEntregas fechaDeEntregas fechaDeEntrega fechaDeEntrega"
+     "eliminar eliminar entregar entregar";
     }
-    .numeroPedido{
+    .pedido__id{
         grid-area: pedido;
     }
 
-    .fechaPedido{
+    .pedido__fecha{
         grid-area: fecha;
     }
 
-    .clientePedido{
+    .pedido__cliente{
         grid-area: cliente;
     }
 
@@ -70,22 +74,35 @@ h2{
         grid-area: direccion;
     }
 
-    .items-pedido{
+    .pedido__carrito{
         grid-area: items;
     }
 
-    .precioPedido{
+    .pedido__precio{
         grid-area: precio
     }
 
-    .detallesPedido{
+    .pedido__detalles{
         grid-area: detalles;
+    
     }
 
-    .fechaDeEntrega{
+    .pedido__fechaDeEntrega{
         grid-area: fechaDeEntrega;
+        text-align: center;
     }
 
+    .pedido__status{
+        grid-area: status;
+        text-align: center;
+    }
 
+    .pedido__eliminar{
+        grid-area: eliminar;
+    }
+
+    .pedido__entregar{
+        grid-area: entregar;
+    }
 
 
