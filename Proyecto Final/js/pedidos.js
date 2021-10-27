@@ -49,7 +49,7 @@ const buscarPedido = (id) =>{
 //Eliminar un pedido
 
 const eliminarPedido = (id) => {
-    const pedido = buscarpedido(id)
+    const pedido = buscarPedido(id)
     const index = pedidos.indexOf(pedido)
     pedidos.splice(index,1)
 }
@@ -109,16 +109,33 @@ const mostrarPedidos = () =>{
         <div class="pedido__fechaDeEntrega"> ${pedido.fechaDeEntrega} </div>
         <div class="pedido__status">Estado: ${pedidoEntregado(pedido.id)}</div>
         <div class="pedido__eliminar">
-            <button class="pedido__eliminar--boton">Eliminar</button>
+             <button id='eliminar-${pedido.id}' class="pedido__eliminar--boton">Eliminar</button>
         </div>
         <div class='pedido__entregar'>
-            <button class="pedido__entregar--boton">Entregar</button>
+        <button id='entregar-${pedido.id}' class="pedido__entregar--boton">Entregar</button>
         </div>
         </div>
         `
         CuadroPedidos.appendChild(CuadroPedido);
+
+        const btnEliminar = document.getElementById(`eliminar-${pedido.id}`)
+        btnEliminar.addEventListener('click', () => {
+            eliminarPedido(pedido.id)
+            mostrarPedidos()
+            
+               
+        })
+        const btnEntregar = document.getElementById(`entregar-${pedido.id}`)
+        btnEntregar.addEventListener('click', () => {
+            pedido.status = true
+            document.location.reload()
+        })
     }
+
+//Los botones de eliminar y entregar no funcionan hasta no enlazar el carrito con el panel de control.
+
 
 }
 
 mostrarPedidos();
+

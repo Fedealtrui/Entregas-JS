@@ -13,14 +13,14 @@
     <main>
         <div id="stock">
         <h2 class="titulo">Stock</h2>
-        <ul class="stock-items">
-            <li class='item'><img src="https://via.placeholder.com/150" class='item-img' alt=""> <ul><li> Nombre:</li> <li> Precio:</li> <li> Cantidad: </li></ul></li>
-        </ul>
+        <div id="lista-productos">
+            <!-- <li class='item'><img src="https://via.placeholder.com/150" class='item-img' alt=""> <ul><li> Nombre:</li> <li> Precio:</li> <li> Cantidad: </li></ul></li> -->
+        </div>
     </div>
 
         <div id="modificadorDeStock">
         <h2>Agregar productos</h2>
-        <form id="form-stock">
+        <form id="form-Stock">
 
             
             <label for="nombre">
@@ -37,28 +37,15 @@
 
             <label for="cantidad"> Cantidad</label>
             <input type="number" name="cantidad" id="cantidad">
+            
+            <input type="submit" value="Agregar">
         </form>
     </div>
     <div id="pedidos">
 
-        <!-- </div> -->
-
-        <!-- <div class='pedido'> 
-            <h3 class='numeroPedido'>Pedido #xxxx</h3>
-            <div class="fechaPedido">Fecha:</div>
-            <div class='clientePedido'>Nombre Cliente:</div>
-            <div class= 'contactoPedido'>Contacto:</div>
-            <div class='direccionPedido'>Direccion:</div>
-            <div class="items-pedido" id='items-pedido'>
-                item
-            </div>
-            <div class='precioPedido'>Precio:</div>
-            <div class='detallesPedido'>Detalles:</div>
-            <div class='fechaDeEntrega'>Fecha de entrega:</div>
-        </div> -->
     </div>
     </main>
     <script src="js/pedidos.js"></script>
-    <!-- <script src="js/crud.js"></script> -->
+     <script src="js/productos.js"></script>
 </body>
 </html>
