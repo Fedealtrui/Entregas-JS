@@ -122,7 +122,7 @@ const inputPrecio = document.getElementById('precio')
 formStock.addEventListener('submit', (event) => {
     event.preventDefault()
     const id = productos.length + 1
-    const nombre = inputNombre.value
+    const nombre = inputNombre.value 
     const precio = inputPrecio.value
     const stock = inputStock.value
 
@@ -136,7 +136,7 @@ formStock.addEventListener('submit', (event) => {
 
 // Mostrar productos en el DOM
 
-const listaProductos = document.getElementById('lista-productos')
+ const listaProductos = document.getElementById('lista-productos')
 
 
 const mostrarProductos = () =>{
