@@ -1,0 +1,49 @@
+[
+    {
+        "id":1, 
+        "nombre": "Linea Natural",  
+        "precio": 249,  
+        "cantidad": 20 
+
+    },
+
+    {
+        "id":2, 
+        "nombre": "Palo Santo",  
+        "precio": 220,  
+        "cantidad":10
+   
+    },
+
+    {
+        "id":3, 
+        "nombre": "Linea Hierbas",  
+        "precio": 340,  
+        "cantidad":20 
+      
+    },
+
+    {
+        "id":4, 
+        "nombre": "Linea Combinados",  
+        "precio": 340,  
+        "cantidad":10
+
+    },
+
+    {
+        "id":5, 
+        "nombre": "Sahumo Flores Chicos",  
+        "precio": 200,  
+        "cantidad":10 
+      
+    },
+
+    {
+        "id":6,
+        "nombre": "Sahumo Limpieza Energ",  
+        "precio": 200,  
+        "cantidad":10 
+       
+    }
+]
