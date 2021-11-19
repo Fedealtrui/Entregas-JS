@@ -1,10 +1,11 @@
 
+
 // C: create
 // R: read
 // U: update
 // D: delete
 
-class Producto{
+ class Producto{
     constructor(id,nombre,precio,stock) {
         this.id = id;
         this.nombre = nombre;
@@ -29,8 +30,10 @@ const getAll = () => {
 // Metodo para agregar un producto a la lista
 const create = (producto) => {
     productos.push(producto)
-    localStorage.setItem('productos', JSON.stringify(productos))
-}
+    localStorage.setItem('productos', JSON.stringify(productos))    
+    }
+    
+
 
 // Metodo para hallar un producto por id
 const findOne = (id) => {
@@ -56,6 +59,17 @@ const remove = (id) => {
     localStorage.setItem('productos', JSON.stringify(productos))
 
 }
+
+//Validar si existe el producto
+const existeProducto = (id) => {
+    const producto = findOne(id)
+    if (!producto) {
+        return false}
+    else {
+        return true 
+    } 
+}
+
 
 
 // Metodo para modificar el stock
@@ -85,7 +99,7 @@ const inputPrecio = $('#precio')
 
 formStock.submit(function (e) {
     e.preventDefault()
-    const id = productos.length + 1;
+    const id = productos.length + 1
     const stock = inputStock.val();
     const nombre = inputNombre.val();
     const precio = inputPrecio.val();
@@ -103,10 +117,10 @@ formStock.submit(function (e) {
 const mostrarProductos = () =>{
 
     for (const producto of productos) {
+
+        
         $("#lista-productos").append( `
         <div id="producto${producto.id}"  class= "producto">
-        
-        <div class="producto__id"> ID: ${producto.id}</div>
         <div class="producto__nombre">Nombre: ${producto.nombre}</div>
         <div class="producto__precio">Precio: ${producto.precio}</div>
         <div class="producto_stock"> Items:${producto.stock} </div>
@@ -116,15 +130,19 @@ const mostrarProductos = () =>{
         </div>
         `
         )
-        
         const botonEliminar = $(`#${producto.id}`)
-        botonEliminar.click(function () {
-            $(`#producto${producto.id}`).remove();
-            remove(producto.id);
-
-        })
+            botonEliminar.click(function () {
+                $(`#producto${producto.id}`).remove();
+                remove(producto.id);
+               
+    
+            })
+      
     }
 
 }
 
     mostrarProductos()
+
+
+export { getAll, create, findOne, remove, update, orden, Producto,productos, existeProducto } ;

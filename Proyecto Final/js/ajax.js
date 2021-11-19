@@ -1,3 +1,4 @@
+import  { getAll, create, findOne, remove, update, orden,  Producto, productos, existeProducto } from './productos.js'
 const JSON_PRODUCTOS = 'db/productos.json'    
 const JSON_PEDIDOS = 'db/pedidos.json'
 
@@ -10,34 +11,50 @@ const mostrarProductosJSON = () => { //Funcion que muestra los productos en el D
             throw new Error('error')
         }
 
-        for ( const producto of response ) {
+
+
+
+    
+    
+
+
+        for ( const productoJSON of response ) {
+
+            console.log(productoJSON)
+
 
             $("#lista-productos").append( `
-            <div id="producto${producto.id}"  class= "producto">
+            <div id="producto${productoJSON.id}"  class= "producto">
             
-            <div class="producto__id"> ID: ${producto.id}</div>
-            <div class="producto__nombre">Nombre: ${producto.nombre}</div>
-            <div class="producto__precio">Precio: ${producto.precio}</div>
-            <div class="producto_stock"> Items:${producto.cantidad} </div>
+           
+            <div class="producto__nombre">Nombre: ${productoJSON.nombre}</div>
+            <div class="producto__precio">Precio: ${productoJSON.precio}</div>
+            <div class="producto_stock "> Items:${productoJSON.cantidad} </div>
             
-            <div class="producto__botones"> <span id="${producto.id}" style='cursor:pointer'>Eliminar</span> </div>
+            <div class="producto__botones"> <span id="${productoJSON.id}" style='cursor:pointer'>Eliminar</span> </div>
             </div>
             </div>
             `
             )
 
-            const botonEliminar = $(`#${producto.id}`)
+            const botonEliminar = $(`#${productoJSON.id}`)
             botonEliminar.click(function () {
-                $(`#producto${producto.id}`).remove();
-                remove(producto.id);
+                $(`#producto${productoJSON.id}`).remove();
+               
     
             })
-        }
 
-    })
-}
+           
+            
+    }
+
+    })}
+
 
 mostrarProductosJSON()
+
+
+
 
 
 
@@ -49,9 +66,11 @@ const mostrarPedidosJSON = () => { //Funcion que muestra los pedidos en el DOM
             throw new Error('error')
         }
 
+
+        
+        
         for ( const pedido of response ) {
 
-           
 
             $("#lista-pedidos").append( `
             <div id="pedido${pedido.id}"  class= "pedido">
@@ -70,7 +89,7 @@ const mostrarPedidosJSON = () => { //Funcion que muestra los pedidos en el DOM
             
             <div class="pedido__status">Estado: ${pedido.estado}</div>
             
-           
+            <div class="pedido__botones"> <span id="Entregar-${pedido.id}" style='cursor:pointer'><i class="fas fa-check-circle"></i></span> </div>
             
             </div>
             `
@@ -83,3 +102,6 @@ const mostrarPedidosJSON = () => { //Funcion que muestra los pedidos en el DOM
         }
 
         mostrarPedidosJSON()
+
+
+        
