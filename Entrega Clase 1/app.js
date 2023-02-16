@@ -172,7 +172,7 @@ alert(`Gracias ${nombre} por visitarme.`)
 
     //Algoritmo multiploYPar
         //Definir A como Entero;
-        // Definir B como Entero;
+        //Definir B como Entero;
 
         //Escribir "Ingrese A:";
         // Leer A;
