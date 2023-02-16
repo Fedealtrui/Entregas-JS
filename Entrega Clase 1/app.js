@@ -221,4 +221,26 @@ alert(`Gracias ${nombre} por visitarme.`)
 //FinAlgoritmo
 
 
+
+// Estructuras de repeticion
+
+
+            //Estructuras inCondicionales
+
+                //Algoritmo RepeticionInco
+                    //definir n1, n2, i como entero
+                    //Leer n1
+                        //Para i<-1 hasta 3 paso 1
+                            //Leer n2
+                            //Si (n2>n1)
+                                //n1<-n2
+                            //finSi
+                        //finPara
+                    //Escribir n1
+                //FinAlgoritmo
+            
+            // Estructuras Condicionales
+
+                //Algoritmo RepeticionCon
+
         
