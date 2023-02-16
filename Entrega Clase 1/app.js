@@ -135,4 +135,62 @@ alert(`Gracias ${nombre} por visitarme.`)
 
 
 
+// Clase 16/02
+
+// Operador modulo
+        // a MOD b = resto;
+
+    //Algoritmo multiplo
+        //Definir A como Entero;
+        // Definir B como Entero;
+
+        //Escribir "Ingrese A:";
+        // Leer A;
+
+        //Escribir "Ingrese B:";
+        //Leer B ;
+
+        //Si (a Mod b == 0)
+            //Escribir "A es multiplo de B";
+        //FINSI
+
+
+        //Si (b Mod a == 0)
+            //Escribir "B es multiplo de A";
+        //FinSi
+
+    //FinAlgoritmo
+
+
+//  paso  / A / B  / a mod b / Output /
+//       /   /    /         /
+//      /   /    /         /
+//     /   /    /         /
+//    /   /    /         /
+
+
+
+    //Algoritmo multiploYPar
+        //Definir A como Entero;
+        // Definir B como Entero;
+
+        //Escribir "Ingrese A:";
+        // Leer A;
+
+        //Escribir "Ingrese B:";
+        //Leer B ;
+
+
+        //Si (A mod B == 0)
+            //Si (A mod 2 == 0)
+                //Escribir "A es multiplo de B y es Par;
+            //Sino
+                //Escribir "A es multiplo de B pero no es Par";
+            //FinSi
+        //Sino
+            //Escribir "No son multiplo";
+        //FinSi
+//FinAlgoritmo
+    
+
         
