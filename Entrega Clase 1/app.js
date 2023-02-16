@@ -191,6 +191,34 @@ alert(`Gracias ${nombre} por visitarme.`)
             //Escribir "No son multiplo";
         //FinSi
 //FinAlgoritmo
-    
+
+
+
+    //Algoritmo elMayor
+        
+        //Definir a, b, c COMO ENTERO;
+
+        //Escribir "Ingrese A:";
+        //Leer A;
+        //Escribir "Ingrese B:";
+        //Leer B;
+        //Escribir "Ingrese C:";
+        //Leer C;
+
+        //Si (A>=B)
+            //SI (A>=C)
+                //ESCRIBIR A;
+            //SINO
+                //Escribir C;
+            //FinSi
+        //Sino
+            //Si (B>=C)
+                //ESCRIBIR B;
+            //Sino
+                //ESCRIBIR C;
+            //FinSi
+        //FinSi
+//FinAlgoritmo
+
 
         
